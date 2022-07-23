@@ -20,8 +20,8 @@ public class EmailSenderController {
 	private EmailService emailService;
 	
 	//Declaring value of aditya
-	String aditya = "5474";
-	//above mentioned line made to use it in future
+	String aditya = "5474gdagdj";
+	//above mentioned line made to use it in future babjbnm
 	@PostMapping("/public/email")
 	public ResponseEntity<?> sendEmail() throws MessagingException {
 		boolean result = this.emailService.sendEmail();
