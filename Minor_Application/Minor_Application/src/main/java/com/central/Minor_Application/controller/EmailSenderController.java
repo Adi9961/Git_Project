@@ -19,7 +19,7 @@ public class EmailSenderController {
 	
 	@Autowired
 	private EmailService emailService;
-	
+	//This is an API
 	@PostMapping("/public/email")
 	public ResponseEntity<?> sendEmail() throws MessagingException {
 		boolean result = this.emailService.sendEmail();
