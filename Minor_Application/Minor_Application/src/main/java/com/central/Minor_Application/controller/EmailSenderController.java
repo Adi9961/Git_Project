@@ -19,7 +19,8 @@ public class EmailSenderController {
 	@Autowired
 	private EmailService emailService;
 	
-	//This REST API is to sent the email
+	//Declaring value of aditya
+	String aditya = null;
 	@PostMapping("/public/email")
 	public ResponseEntity<?> sendEmail() throws MessagingException {
 		boolean result = this.emailService.sendEmail();
