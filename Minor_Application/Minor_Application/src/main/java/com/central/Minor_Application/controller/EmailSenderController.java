@@ -32,5 +32,7 @@ public class EmailSenderController {
 		}
 		
 	}
+	
+	//Above method id to sent email
 
 }
