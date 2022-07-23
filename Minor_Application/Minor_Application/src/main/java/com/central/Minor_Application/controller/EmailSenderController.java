@@ -32,5 +32,19 @@ public class EmailSenderController {
 	}
 	
 	//Above method is to send email
+	
+	@PostMapping("/public/email")
+	public ResponseEntity<?> sendEmail1() throws MessagingException {
+		boolean result = this.emailService.sendEmail();
+		if(result) {
+			return ResponseEntity.ok("Email has been sent successfully to delete your account....Schrack team will connect with you soon");
+		}
+		else {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Email not sent...");
+		}
+		
+	}
+	
+	//Above method is to send email
 
 }
