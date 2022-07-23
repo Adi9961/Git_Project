@@ -6,11 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.central.Minor_Application.model.EmailRequest;
 import com.central.Minor_Application.services.EmailService;
 
 @RestController
@@ -19,7 +17,8 @@ public class EmailSenderController {
 	
 	@Autowired
 	private EmailService emailService;
-	//This is an API
+	
+	//This REST API is to sent the email
 	@PostMapping("/public/email")
 	public ResponseEntity<?> sendEmail() throws MessagingException {
 		boolean result = this.emailService.sendEmail();
@@ -31,5 +30,7 @@ public class EmailSenderController {
 		}
 		
 	}
+	
+	//Above method is to send email
 
 }
