@@ -14,7 +14,7 @@ public class LimitController {
 	@Autowired
 	private LimitsConfiguration limits;
 	
-	@GetMapping("/limits")
+	@GetMapping("/limitmodule")
 	public LimitsConfiguration returnLimits() {
 		
 		return  new LimitsConfiguration(limits.getMaximum(),limits.getMinimum());
