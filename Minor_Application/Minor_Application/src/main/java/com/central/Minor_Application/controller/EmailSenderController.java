@@ -37,6 +37,12 @@ public class EmailSenderController {
 		
 	}
 	
+	@GetMapping("/demo")
+	public String Demo() {
+		return "This result has been shown to you on hitting demo API..!";
+		
+	}
+	
 	//Above method is to send email
 	
 	@GetMapping("/public/email")
